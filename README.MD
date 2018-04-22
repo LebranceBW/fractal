@@ -20,4 +20,4 @@
 >![equation2](./img/equ2.gif)
 
 
-[JAR下载](./dist/fern_leaf.jar)
+[JAR下载](https://github.com/LebrancBW/fractal/raw/master/dist/dist.jar)
