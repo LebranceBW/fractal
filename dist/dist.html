@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <SCRIPT src="https://java.com/js/dtjava.js"></SCRIPT><script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'dist.jnlp',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48am5scCBzcGVjPSIxLjAiIHhtbG5zOmpmeD0iaHR0cDovL2phdmFmeC5jb20iIGhyZWY9ImRpc3Quam5scCI+DQogICAgPGluZm9ybWF0aW9uPg0KICAgICAgICA8dGl0bGU+ZmVybiBsZWFmPC90aXRsZT4NCiAgICAgICAgPHZlbmRvcj5BcHBsaWNhdGlvbiB2ZW5kb3I8L3ZlbmRvcj4NCiAgICAgICAgPGRlc2NyaXB0aW9uPkFwcGxpY2F0aW9uIGRlc2NyaXB0aW9uPC9kZXNjcmlwdGlvbj4NCiAgICAgICAgPG9mZmxpbmUtYWxsb3dlZC8+DQogICAgPC9pbmZvcm1hdGlvbj4NCiAgICA8dXBkYXRlIGNoZWNrPSJiYWNrZ3JvdW5kIi8+DQogICAgPHJlc291cmNlcz4NCiAgICAgICAgPGoyc2UgdmVyc2lvbj0iMTAuMC4xKyIgaHJlZj0iaHR0cDovL2phdmEuc3VuLmNvbS9wcm9kdWN0cy9hdXRvZGwvajJzZSIvPg0KICAgICAgICA8amFyIGhyZWY9ImRpc3QuamFyIiBzaXplPSI0NzI4Ii8+DQogICAgPC9yZXNvdXJjZXM+DQogICAgPGpmeDpqYXZhZngtZGVzYyB3aWR0aD0iMCIgaGVpZ2h0PSIwIiBtYWluLWNsYXNzPSJMZWJyYW5jZUJXLkRyYXdHcmFwaCIgbmFtZT0iZmVybiBsZWFmIi8+DQo8L2pubHA+DQoNCg=='
+            },
+            {
+                javafx : '10.0.1+'
+            },
+            {}
+        );
+        return false;
+    }
+</script><script>
+    function javafxEmbedLebranceBW() {
+        dtjava.embed(
+            {
+                id : 'LebranceBW',
+                url : 'dist.jnlp',
+                placeholder : '\'javafx-app-placeholder\'',
+                width : '0',
+                height : '0',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48am5scCBzcGVjPSIxLjAiIHhtbG5zOmpmeD0iaHR0cDovL2phdmFmeC5jb20iIGhyZWY9ImRpc3Quam5scCI+DQogICAgPGluZm9ybWF0aW9uPg0KICAgICAgICA8dGl0bGU+ZmVybiBsZWFmPC90aXRsZT4NCiAgICAgICAgPHZlbmRvcj5BcHBsaWNhdGlvbiB2ZW5kb3I8L3ZlbmRvcj4NCiAgICAgICAgPGRlc2NyaXB0aW9uPkFwcGxpY2F0aW9uIGRlc2NyaXB0aW9uPC9kZXNjcmlwdGlvbj4NCiAgICAgICAgPG9mZmxpbmUtYWxsb3dlZC8+DQogICAgPC9pbmZvcm1hdGlvbj4NCiAgICA8dXBkYXRlIGNoZWNrPSJiYWNrZ3JvdW5kIi8+DQogICAgPHJlc291cmNlcz4NCiAgICAgICAgPGoyc2UgdmVyc2lvbj0iMTAuMC4xKyIgaHJlZj0iaHR0cDovL2phdmEuc3VuLmNvbS9wcm9kdWN0cy9hdXRvZGwvajJzZSIvPg0KICAgICAgICA8amFyIGhyZWY9ImRpc3QuamFyIiBzaXplPSI0NzI4Ii8+DQogICAgPC9yZXNvdXJjZXM+DQogICAgPGpmeDpqYXZhZngtZGVzYyB3aWR0aD0iMCIgaGVpZ2h0PSIwIiBtYWluLWNsYXNzPSJMZWJyYW5jZUJXLkRyYXdHcmFwaCIgbmFtZT0iZmVybiBsZWFmIi8+DQo8L2pubHA+DQoNCg=='
+            },
+            {
+                javafx : '10.0.1+'
+            },
+            {}
+        );
+    }
+    
+            <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedLebranceBW);
+</script>
+    </head>
+    <body>
+        <h2>
+            Test page for <b>fern leaf</b>
+        </h2>
+        <b>Webstart:</b><a href="dist.jnlp" onclick="return launchApplication('dist.jnlp');">click to launch this app as webstart</a>
+        <br>
+        <hr>
+        <br>
+        
+        <!-- Applet will be inserted here -->
+        <div id="'javafx-app-placeholder'"></div>
+    </body>
+</html>
