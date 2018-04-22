@@ -17,13 +17,18 @@ import javafx.scene.paint.Color;
 
 public class DrawGraphController implements Initializable
 {
-	// ¶¨ÒåÔÚFXMLÖĞµÄ×é¼şController
+	/*
+	 *  FXMLæ§åˆ¶å™¨ç±» 
+	 * 
+	 */
+	
+	// FXMLæ§ä»¶å®šä¹‰
 	@FXML private Canvas dst_canvas;
 	@FXML private Button sure_btn, quit_btn;
 	@FXML private Slider slider;
 	@FXML private Label counter_label;
 	
-	// Ş§ÀàÒ¶×ÓµÄ»æÖÆ¾ØÕó£¬¸ÅÂÊ×ÔÉÏµ½ÏÂÎª1% 7% 7% 85%
+	// è•¨å¶çŸ©é˜µ
 	private final double[][] coefficient = 
 	{
 		{0, 0, 0, 0, 0.16, 0},
@@ -32,7 +37,7 @@ public class DrawGraphController implements Initializable
 		{0.85, 0.04, 0, -0.04, 0.85, 1.6},
 	};
 	
-	// ³õÊ¼»¯£¬°ó¶¨¼àÊÓÆ÷
+	// ç»‘å®šäº‹ä»¶ç›‘å¬å™¨
 	@Override
 	public void initialize(URL location, ResourceBundle resources)
 	{
@@ -41,20 +46,20 @@ public class DrawGraphController implements Initializable
 		slider.valueProperty().addListener(e->
 		{
 			drawgraph(dst_canvas, (int)slider.getValue());
-			counter_label.setText(String.format("Ñ­»·£º%.1fW´Î", slider.getValue()/10000));
+			counter_label.setText(String.format("å¾ªç¯ï¼š%.1fWæ¬¡", slider.getValue()/10000));
 		});
 	}
 	
+	// Canvasç»˜å›¾
 	private void drawgraph(Canvas canvas, int counts)
 	{
-		/* ÊäÈë»­²¼Óëµü´ú´ÎÊı£¬»æÖÆÍ¼ĞÎ */
-		// ¶¨Òå»º³åÍ¼ĞÎ
+		// å®šä¹‰å›¾ç‰‡ä¸åˆå§‹åŒ–Image
 		int height = (int) canvas.getHeight();
 		int width = (int) canvas.getWidth();
 		WritableImage wImage = new WritableImage(width, height);
 		PixelWriter pw = wImage.getPixelWriter();
 		
-		// Éú³ÉŞ§ÀàÒ¶×Ó
+		// éšæœºè¿‡ç¨‹ç”Ÿæˆå›¾ç‰‡
 		Random rd_generator = new Random();
 		double x0 = 1;
 		double y0 =1;
@@ -62,15 +67,14 @@ public class DrawGraphController implements Initializable
 		{
 			float rd = rd_generator.nextFloat();
 			int index = 0;
-			// ¸ù¾İ¸ÅÂÊÄ£ÄâËæ»úÑ¡È¡
-			if(rd < 0.89) //µÚËÄÖÖÇé¿ö
+			if(rd < 0.89) 
 				index = 3;
 			else if(rd < 0.94)
-				index = 2; // µÚÈıÖÖ
+				index = 2; 
 			else if(rd < 0.99)
-				index = 1; // µÚÈıÖÖ
+				index = 1; 
 			else 
-				index = 0; // µÚÈıÖÖ
+				index = 0; 
 						
 			double x1 = coefficient[index][0]*x0 + coefficient[index][1]*y0 + coefficient[index][2];
 			double y1 = coefficient[index][3]*x0 + coefficient[index][4]*y0 + coefficient[index][5];
@@ -78,7 +82,6 @@ public class DrawGraphController implements Initializable
 			x0 = x1;
 			y0 = y1;
 			
-			// »æÍ¼×ø±ê×ª»»
 			// x -5 ~ 5
 			// y 0 - 10
 			int draw_x = (int) ((width / 2) + x1/10*(width-1) );
@@ -86,7 +89,7 @@ public class DrawGraphController implements Initializable
 			Color colorRand[] = {Color.BLACK, Color.TURQUOISE, Color.BLUE, Color.GREEN};
 			pw.setColor(draw_x, draw_y, colorRand[index]);
 		}
-		// Çå³ıÉÏ´ÎµÄÄÚÈİÈ»ºó½«Image»ØÖ´µ½CanvasÉÏ
+		// æ¸…ç©ºå¹¶ä¸”é‡ç»˜åˆ¶
 		canvas.getGraphicsContext2D().clearRect(0, 0, width, height);
 		canvas.getGraphicsContext2D().drawImage(wImage, 0, 0);
 	}
