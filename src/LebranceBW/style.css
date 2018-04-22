@@ -1,13 +1,13 @@
 #mainPanel
 {
-	-fx-border-width: 2;
+	-fx-border-width: 1;
 	-fx-border-style: solid inside;
 	-fx-border-color: rgb(83, 83, 83);
 }
 #title_box
 {
 	-fx-background-color: rgb(83, 83, 83);
-	-fx-padding: 2px 0px 2px 5px
+	-fx-padding: 0px 0px 0px 5px
 }
 #count_label
 {

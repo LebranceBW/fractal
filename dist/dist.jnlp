@@ -8,7 +8,7 @@
     <update check="background"/>
     <resources>
         <j2se version="10.0.1+" href="http://java.sun.com/products/autodl/j2se"/>
-        <jar href="dist.jar" size="4733"/>
+        <jar href="dist.jar" size="5275"/>
     </resources>
     <jfx:javafx-desc width="0" height="0" main-class="LebranceBW.DrawGraph" name="fern leaf"/>
 </jnlp>

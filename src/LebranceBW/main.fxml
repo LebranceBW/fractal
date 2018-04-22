@@ -17,10 +17,10 @@
             <Label id="title" text="分形——蕨类叶片" BorderPane.alignment="CENTER" />
          </left>
          <right>
-               <Button id="exit_btn" fx:id="quit_btn" text="X" BorderPane.alignment="CENTER" />
+               <Button id="exit_btn" fx:id="quit_btn" text="X" textAlignment="CENTER" BorderPane.alignment="CENTER" />
          </right>
       </BorderPane>
-   <HBox spacing="5.0">
+   <HBox id="mainPanel" spacing="5.0">
       <children>
                      <Canvas fx:id="dst_canvas" height="300.0" width="300.0" />
                      <Separator orientation="VERTICAL" prefHeight="200.0" />
