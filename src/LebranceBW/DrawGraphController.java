@@ -63,9 +63,9 @@ public class DrawGraphController implements Initializable
 			float rd = rd_generator.nextFloat();
 			int index = 0;
 			// 根据概率模拟随机选取
-			if(rd < 0.85) //第四种情况
+			if(rd < 0.89) //第四种情况
 				index = 3;
-			else if(rd < 0.92)
+			else if(rd < 0.94)
 				index = 2; // 第三种
 			else if(rd < 0.99)
 				index = 1; // 第三种
@@ -83,7 +83,7 @@ public class DrawGraphController implements Initializable
 			// y 0 - 10
 			int draw_x = (int) ((width / 2) + x1/10*(width-1) );
 			int draw_y = (int) ((1 - y1/10) * height);
-			Color colorRand[] = {Color.RED, Color.TURQUOISE, Color.BLUE, Color.GREEN};
+			Color colorRand[] = {Color.BLACK, Color.TURQUOISE, Color.BLUE, Color.GREEN};
 			pw.setColor(draw_x, draw_y, colorRand[index]);
 		}
 		// 清除上次的内容然后将Image回执到Canvas上
