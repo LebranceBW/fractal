@@ -9,6 +9,10 @@
 	-fx-background-color: rgb(83, 83, 83);
 	-fx-padding: 2px 0px 2px 5px
 }
+#count_label
+{
+	-fx-font:bold 12px "Courier";
+}
 #exit_btn
 {
 	-fx-background-color: rgba(83, 83, 83, 100);
