@@ -20,4 +20,4 @@
 >![equation2](./img/equ2.gif)
 
 
-[JAR下载](./dist/fern%leaf.jar)
+[JAR下载](./dist/fern_leaf.jar)
