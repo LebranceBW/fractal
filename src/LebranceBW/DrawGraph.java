@@ -1,4 +1,4 @@
-package drawGraph;
+package LebranceBW;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -19,10 +19,9 @@ public class DrawGraph extends Application
 	{
 		Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
 		primaryStage.setScene(new Scene(root));
-		primaryStage.setTitle("»æÖÆ·ÖÐÎ");
 		primaryStage.initStyle(StageStyle.UNDECORATED);
 		primaryStage.show();
-
+		
 		
 	}
 	

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.* ?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox id="root" fx:id="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LebranceBW.DrawGraphController">
+   <children>
+      <BorderPane id="title_box" fx:id="title_panel">
+         <left>
+            <Label id="title" text="分形——蕨类叶片" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+               <Button id="exit_btn" fx:id="quit_btn" text="X" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   <HBox spacing="5.0">
+      <children>
+                     <Canvas fx:id="dst_canvas" height="300.0" width="300.0" />
+                     <Separator orientation="VERTICAL" prefHeight="200.0" />
+                     <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="40.0">
+                        <children>
+                                          <Slider fx:id="slider" blockIncrement="10000.0" majorTickUnit="10000.0" max="80000.0" min="10000.0" minorTickCount="0" orientation="VERTICAL" showTickMarks="true" snapToTicks="true" />
+                                          <Label fx:id="Label" text="10000.0" />
+                        </children>
+                <padding> <Insets bottom="20.0" left="5.0" right="5.0" /> </padding>
+             </VBox>
+      </children>
+   </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,29 @@
+#mainPanel
+{
+	-fx-border-width: 2;
+	-fx-border-style: solid inside;
+	-fx-border-color: rgb(83, 83, 83);
+}
+#title_box
+{
+	-fx-background-color: rgb(83, 83, 83);
+	-fx-padding: 2px 0px 2px 5px
+}
+#exit_btn
+{
+	-fx-background-color: rgba(83, 83, 83, 100);
+	-fx-text-fill: White;
+}
+#exit_btn:hover
+{
+	-fx-background-color: red;
+}
+#exit_btn:pressed
+{
+	-fx-background-color: gray;
+}
+#title
+{
+	-fx-text-fill:White;
+	-fx-font: bold 15px "Courier"
+}
