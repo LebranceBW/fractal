@@ -19,5 +19,3 @@
 >![equation1](./img/equ1.gif)
 >![equation2](./img/equ2.gif)
 
-
-[JAR下载](https://github.com/LebrancBW/fractal/raw/master/dist/dist.jar)
